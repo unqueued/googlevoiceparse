@@ -9,7 +9,9 @@ Will dump the parsed message to STDOUT as .[tsv](https://en.wikipedia.org/wiki/T
 To import into SQLite:
 
 ```bash
-sqlite3 allmessages.db 'create table if not exists messages (date text primary key, diretion text, sender text, message text)'
-sqlite3 allmessages.db '.mode tabs messages'
-sqlite3 allmessages.db '.import allmessages.tsv messages'
+sqlite3 allmessages.db <<SQL
+create table if not exists messages (date text primary key, diretion text, sender text, message text)
+.mode tabs messages
+.import allmessages.tsv messages
+SQL
 ```
