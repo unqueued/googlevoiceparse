@@ -10,7 +10,7 @@ To import into SQLite:
 
 ```bash
 sqlite3 allmessages.db <<SQL
-create table if not exists messages (date text primary key, diretion text, sender text, message text)
+create table if not exists messages (date text primary key, diretion text, sender text, message text);
 .mode tabs messages
 .import allmessages.tsv messages
 SQL
