@@ -5,6 +5,7 @@ Will dump the parsed message to STDOUT as .[tsv](https://en.wikipedia.org/wiki/T
 ```bash
 ./calls_parse.pl 1112223333 Calls/ > allmessages.tsv
 ```
+Where 1112223333 is your phone number.
 
 To import into SQLite:
 
