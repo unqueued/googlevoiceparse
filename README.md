@@ -30,5 +30,6 @@ SQL
 - [ ] Currently the way I suggested importing into sqlite does not have milisecond precision, which can cause collisions
 - [ ] Comment more
 - [ ] Refactor to be a cleaner FSM
+- [ ] Convert HTML entities to their ASCII or Unicode equivilents, like ```&#39;```
 
 As of 2020-02-10, parser still works.
