@@ -67,7 +67,7 @@ foreach(@files) {
 			if($sender == "") {
 				last;
 				print "timestamp: $timestamp | sender: $sender | message: $message\n";
-				die("Fuck");
+				die("Format error");
 			}
 			if($sender != $my_number) {
 				if($sender != $other_subject) {
