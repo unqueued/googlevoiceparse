@@ -5,6 +5,7 @@
 
 use Mojo::DOM;
 use Data::Dumper;
+use HTML::Entities;
 
 # Parse args
 
@@ -46,7 +47,6 @@ foreach(@files) {
 
 		@eachmessage = $dom->find('div.message')->each();
 		foreach(@eachmessage) {
-
 
 			$message = Mojo::DOM->new($_);
 
@@ -94,7 +94,7 @@ foreach(@files) {
 			} else {
 				print "Incoming\t$i\t";
 			}
-			print pop @quotes;
+			print decode_entities(pop @quotes);
 			print "\n";
 		}
 
