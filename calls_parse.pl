@@ -32,8 +32,6 @@ local $/; #Enable local slurp mode
 my $limitcounter;
 my $limit = 40;
 
-my @text_clusters;
-
 foreach(@files) {
 	if($_ =~ m/Text/) {
 	    open my $fh, '<', "$calls_dir/$_" or die "can't open $file: $!";
