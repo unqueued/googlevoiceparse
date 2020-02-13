@@ -94,7 +94,14 @@ foreach(@files) {
 			} else {
 				print "Incoming\t$i\t";
 			}
-			print decode_entities(pop @quotes);
+			my $message = pop @quotes;
+
+			# Not really adiquate text sanitization
+			$message = decode_entities($message);
+			$message =~ s/\t/   /g;
+			$message =~ s/\"/\\\\"/g;
+			$message =~ s/\<br\>/ /g;
+			print "$message";
 			print "\n";
 		}
 
