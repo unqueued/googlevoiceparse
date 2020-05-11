@@ -18,8 +18,6 @@ Where 1112223333 is your phone number.
 To import into SQLite:
 
 ```bash
-# It is possible for exact date down to the millisecond to collide, so don't use only 
-# a the date value for the primary key. It did occur a few times in a large tsv for me.
 sqlite3 allmessages.db <<SQL
 create table if not exists messages (date text, diretion text, sender text, message text);
 .mode tabs messages
