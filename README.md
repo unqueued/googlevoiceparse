@@ -3,9 +3,12 @@ This is a parser that will convert a Google Exports Voice archive into a TSV
 
 ## Usage
 
-Requires the [Mojo::DOM](https://metacpan.org/pod/Mojo::DOM) module to be installed:
-```bash
-cpan install Mojo::DOM
+Requires the [Mojo::DOM](https://metacpan.org/pod/Mojo::DOM)
+
+Install required dependencies with cpanm:
+
+```shell
+cpanm --installdeps .
 ```
 
 Will dump the parsed message to STDOUT as .[tsv](https://en.wikipedia.org/wiki/Tab-separated_values)
